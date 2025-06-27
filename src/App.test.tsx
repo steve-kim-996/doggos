@@ -1,9 +1,8 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { DoggoHome } from './DoggoHome';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders doggo images', () => {
+  render(<DoggoHome />);
+  const imgElements = screen.getAllByRole('img');
+  expect(imgElements.length).toBeGreaterThan(0);
 });
