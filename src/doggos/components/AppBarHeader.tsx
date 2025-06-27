@@ -9,4 +9,5 @@ export const AppBarHeader = () => (<AppBar position="static">
             Doggos
         </Typography>
     </Toolbar>
-</AppBar>)
+</AppBar>
+)

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useFetchDoggos = () => {
     const [doggos, setDoggos] = useState<string[]>([])
@@ -20,12 +20,4 @@ export const useFetchDoggos = () => {
     }, [])
 
     return { doggos }
-}
-
-export const useDoDoggoStuff = () => {
-    const bark = useCallback((index: number) => {
-        alert(`Woof! I am dog number ${index + 1}`)
-    }, [])
-
-    return { bark }
 }
